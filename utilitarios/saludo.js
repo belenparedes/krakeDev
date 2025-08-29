@@ -8,6 +8,9 @@ saludar=function()
     let edad=recuperarInt("txtEdad");   
     //recuperar el valor de la caja de texto txtEstatura
     let estatura=recuperarFoat("txtEstatura");
+    //mostrar el mensaje en el componente lblSaludo
+    let mensaje="Bienvenido "+nombre+" "+apellido;
+    mostrarTexto("lblResultado",mensaje);
 }
 
 
@@ -41,4 +44,11 @@ recuperarFoat=function(idComponente)
     valorIngresado=componente.value; 
     valorFlotante=parseFloat(valorIngresado);   
     return valorFlotante;
+}
+
+mostrarTexto=function(idComponente, mensaje)
+{
+    let componente=document.getElementById(idComponente);
+    componente.innerText=mensaje; 
+ 
 }
