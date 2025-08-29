@@ -11,6 +11,8 @@ saludar=function()
     //mostrar el mensaje en el componente lblSaludo
     let mensaje="Bienvenido "+nombre+" "+apellido;
     mostrarTexto("lblResultado",mensaje);
+    //mostrar la imagen en el componente imgFoto
+    mostrarImagen("imgSaludo","./imagenes/saludo1.gif")
 }
 
 
@@ -52,3 +54,8 @@ mostrarTexto=function(idComponente, mensaje)
     componente.innerText=mensaje; 
  
 }
+ mostrarImagen=function(idComponente, rutaImagen)
+ {
+    let componente=document.getElementById(idComponente);
+    componente.src=rutaImagen;
+ }
