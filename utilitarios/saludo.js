@@ -13,6 +13,7 @@ saludar=function()
     mostrarTexto("lblResultado",mensaje);
     //mostrar la imagen en el componente imgFoto
     mostrarImagen("imgSaludo","./imagenes/saludo1.gif")
+    mostrarTextoEnCaja("txtNombre","");
 }
 
 
@@ -58,4 +59,10 @@ mostrarTexto=function(idComponente, mensaje)
  {
     let componente=document.getElementById(idComponente);
     componente.src=rutaImagen;
+ }
+
+ mostrarTextoEnCaja=function(idComponente, mensaje)
+ {
+    let componente=document.getElementById(idComponente);
+    componente.value=mensaje;
  }
