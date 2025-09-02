@@ -8,5 +8,15 @@ calcularPromedioNotas=function()
     nota3=recuperarFloat("txtNota3");
     let promedio=calcularPromedio(nota1,nota2,nota3);
     let resultadoFormateado=promedio.toFixed(2);
-    mostrarTexto("lblPromedio",resultadoFormateado);   
+     
+    if (resultadoFormateado>7)
+    {
+         mostrarTexto("lblPromedio",resultadoFormateado); 
+         mostrarImagen("imge","./imagenes/aprobado.gif");
+    }
+    else
+    {
+         mostrarTexto("lblPromedio",resultadoFormateado); 
+            mostrarImagen("imge","./imagenes/reprobado.gif");
+    }
 }
