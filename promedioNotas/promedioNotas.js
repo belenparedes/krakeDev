@@ -9,14 +9,24 @@ calcularPromedioNotas=function()
     let promedio=calcularPromedio(nota1,nota2,nota3);
     let resultadoFormateado=promedio.toFixed(2);
      
-    if (resultadoFormateado>7)
+    if (resultadoFormateado<5 && resultadoFormateado>0)
     {
-         mostrarTexto("lblPromedio",resultadoFormateado); 
-         mostrarImagen("imge","./imagenes/aprobado.gif");
+         mostrarTexto("lblPromedio",resultadoFormateado)+" REPROBADO"; 
+         mostrarImagen("imge","./imagenes/reprobado.gif");
     }
-    else
+    else if(resultadoFormateado>=5 && resultadoFormateado<=8)
     {
-         mostrarTexto("lblPromedio",resultadoFormateado); 
-            mostrarImagen("imge","./imagenes/reprobado.gif");
+         mostrarTexto("lblPromedio",resultadoFormateado+" BUEN TRABAJO"); 
+            mostrarImagen("imge","./imagenes/buentrabajo.gif");
     }
+    else if(resultadoFormateado>8 && resultadoFormateado<=10)
+    {
+         mostrarTexto("lblPromedio",resultadoFormateado+" EXCELENTE"); 
+            mostrarImagen("imge","./imagenes/exelente.gif");
+    }
+     else 
+     {
+           mostrarTexto("lblPromedio","DATO INCORRECTO");
+           mostrarImagen("imge","./imagenes/error.gif");
+     }
 }
