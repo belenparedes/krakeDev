@@ -17,12 +17,12 @@ calcularPromedioNotas=function()
     else if(resultadoFormateado>=5 && resultadoFormateado<=8)
     {
          mostrarTexto("lblPromedio",resultadoFormateado+" BUEN TRABAJO"); 
-            mostrarImagen("imge","./imagenes/buentrabajo.gif");
+         mostrarImagen("imge","./imagenes/buentrabajo.gif");
     }
     else if(resultadoFormateado>8 && resultadoFormateado<=10)
     {
          mostrarTexto("lblPromedio",resultadoFormateado+" EXCELENTE"); 
-            mostrarImagen("imge","./imagenes/exelente.gif");
+          mostrarImagen("imge","./imagenes/exelente.gif");
     }
      else 
      {
