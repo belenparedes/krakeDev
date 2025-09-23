@@ -98,3 +98,14 @@ validarEstructura=function(placa)
     }
     return estructuraCorrecta;
 }
+limpiar=function()
+{
+
+   mostrarTextoEnCaja("placa"," ");
+   mostrarTexto("lblError1","");
+   mostrarTexto("lblError2","");
+   mostrarTexto("lblError4","");
+   mostrarTexto("lblError5","");
+   mostrarTexto("lblPicoPlaca","");
+
+}

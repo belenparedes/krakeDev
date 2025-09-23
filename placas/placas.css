@@ -113,7 +113,10 @@ body{
 .contenedorBoton{
     display: flex;
     flex:1;
+    gap: 30px;
     justify-content: center;
+    align-items: center;
+
 }
 .cajaTexto{
     border-radius: 4px;
