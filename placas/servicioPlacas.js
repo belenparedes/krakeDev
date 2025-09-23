@@ -1,8 +1,7 @@
 obtenerProvincia=function(placa)
 {
     let provincia;
-    let codigoProvincia=recuperarTexto("placa");
-    provincia=codigoProvincia.charCodeAt(0);
+    provincia=placa.charCodeAt(0);
         
     if(provincia==65)
     {
@@ -101,4 +100,76 @@ obtenerProvincia=function(placa)
         provincia=null;
     }
     return provincia;
+}
+obtenerTipoDeVehiculo=function(placa)
+{
+    let tipoVehiculo;
+    tipoVehiculo=placa.charCodeAt(1);
+        
+    if(tipoVehiculo == 65 || tipoVehiculo == 90) 
+    {
+        tipoVehiculo = "VEHICULO COMERCIAL";
+    }
+    else if(tipoVehiculo == 69)
+    {
+        tipoVehiculo = "VEHICULO GUBERNAMENTAL";
+    }
+    else if(tipoVehiculo == 88) 
+    {
+        tipoVehiculo = "VEHICULO DE USO OFICIAL";
+    }
+    else if(tipoVehiculo == 83) 
+    {
+        tipoVehiculo = "VEHICULO DEL GOBIERNO PROVINCIAL";
+    }
+    else if(tipoVehiculo == 77) 
+    {
+        tipoVehiculo = "VEHICULO MUNICIPAL";
+    }
+    else if((tipoVehiculo >= 66 && tipoVehiculo <= 90) && tipoVehiculo !== 69 && tipoVehiculo !== 83 && tipoVehiculo !== 88 && tipoVehiculo !== 77)
+    {
+        tipoVehiculo = "VEHICULO PARTICULAR";
+    }
+    else
+    {
+        tipoVehiculo = null;
+    }
+
+ 
+    return tipoVehiculo;
+}
+obtenerDiaPicoYPlaca=function(placa)
+{
+    let diaPicoPlaca;
+    let ultimoCaracter;
+    ultimoCaracter=placa.length-1;
+    diaPicoPlaca=placa.charAt(ultimoCaracter);
+    if(diaPicoPlaca==1 || diaPicoPlaca==2)
+    {
+        diaPicoPlaca="LUNES";
+    }   
+    else if(diaPicoPlaca==3 || diaPicoPlaca==4)
+    {
+        diaPicoPlaca="MARTES";
+    }
+    else if(diaPicoPlaca==5 || diaPicoPlaca==6)
+    {
+        diaPicoPlaca="MIERCOLES";
+    }
+    else if(diaPicoPlaca==7 || diaPicoPlaca==8)
+    {
+        diaPicoPlaca="JUEVES";
+    }   
+    else if(diaPicoPlaca==9 || diaPicoPlaca==0)
+    {
+        diaPicoPlaca="VIERNES";
+    }   
+    else
+    {
+        diaPicoPlaca=null;
+    }
+    return diaPicoPlaca;
+    
+
+
 }

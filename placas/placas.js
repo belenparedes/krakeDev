@@ -1,21 +1,34 @@
 validarPlaca=function()
 {
-    let placa=document.getElementById("placa").value;
-    let erroresEstructura=validarEstructura(placa);
+    let placas=recuperarTexto("placa")
+    let erroresEstructura=validarEstructura(placas);
     if (erroresEstructura==null)
     {
        mostrarTexto("lblError1","ESTRUCTURA VALIDA");
         mostrarTexto("lblError2","");
-        let provincia=obtenerProvincia(placa);
+        let provincia=obtenerProvincia(placas);
         if(provincia==null)
         {
-            mostrarTexto("lblError1","PROVINCIA INCORRECTA");
+            mostrarTexto("lblError5","PROVINCIA INCORRECTA");
         }
         else
         {
             let mensaje2="PROVINCIA: "+provincia;
-            mostrarTexto("lblError1",mensaje2);
+            mostrarTexto("lblError4",mensaje2);
         }
+        let tipo=obtenerTipoDeVehiculo(placas);
+        if(tipo==null)
+        {
+            mostrarTexto("lblError5","TIPO DE VEHICULO INCORRECTO");
+        }
+        else
+        {
+            let mensaje3="TIPO DE VEHICULO: "+tipo;
+            mostrarTexto("lblError5",mensaje3);
+        }
+        let PicoPlaca=obtenerDiaPicoYPlaca(placas);
+        mostrarTexto("lblPicoPlaca",PicoPlaca);
+
 
     }
     else

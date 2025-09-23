@@ -32,16 +32,10 @@ esGuion=function(caracter)
 validarEstructura=function(placa)
 {
     let estructuraCorrecta
-    if (placa.length!=7 && placa.length!=8)
+    let longitud=placa.length;
+    if (longitud>=7 && longitud<=8)
     {
-       
-       mostrarTexto ("lblError","La placa debe tener 7 u 8 caracteres");
-         estructuraCorrecta=false;
-
-    }
-    else
-    {
-        mostrarTexto ("lblError","");
+       mostrarTexto ("lblError","");
         let caracter1=placa.charAt(0);
         let caracter2=placa.charAt(1);
         let caracter3=placa.charAt(2);
@@ -92,6 +86,15 @@ validarEstructura=function(placa)
             estructuraCorrecta=false;
         }
    
+      
+
+    }
+    else
+    {
+        mostrarTexto ("lblError","La placa debe tener 7 u 8 caracteres");
+         estructuraCorrecta=false;
+
+
     }
     return estructuraCorrecta;
 }
