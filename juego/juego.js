@@ -34,3 +34,13 @@ jugar=function(seleccionado)
         }
     }
 }
+ limpiar=function()
+ {
+    puntosUsuario=0;
+    puntosComputador=0;
+    mostrarTexto("puntosUsuario",puntosUsuario);
+    mostrarTexto("puntosComputador",puntosComputador);
+    mostrarTexto("resultado","");
+    mostrarTexto("ganador","");
+    mostrarImagen("imagen","");
+ }

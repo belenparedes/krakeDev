@@ -7,18 +7,48 @@
         <script src="utilitarios.js"></script>
     </head>
     <body>
-        <h1>JUEGO PIEDRA PAPEL O TIJERA</h1>
-        <img id="strpiedra" src="./imagenes/piedra.png" width="200px" height="200px" onclick="jugar('piedra');">
-        <img id="strpapel" src="./imagenes/papel.png" width="200px" height="200px" onclick="jugar('papel');">
-        <img id="strtijera" src="./imagenes/tijera.png" width="200px" height="200px"onclick="jugar('tijera');">
-        <img id="imagen" src="">
-       <h1>RESULTADO:</h1> 
-        <h2 id="resultado"></h2>
-        PUNTAJE COMPUTADOR:
-        <h2 id="puntosComputador"></h2>
-        PUNTAJE USUARIO:
-        <h2 id="puntosUsuario"></h2>
-        <h2 id="ganador"></h2>
-
+         <div class="contenedor">
+         <div class="tit"><h1>JUEGO PIEDRA PAPEL O TIJERA</h1></div>
+            <div class="ops"> 
+                <div class="contenedorImagen">
+                <img id="strpiedra" src="./imagenes/piedra.png"  onclick="jugar('piedra');" class="logo">
+            </div>
+            <div class="contenedorImagen">
+                <img id="strpapel" src="./imagenes/papel.png"  onclick="jugar('papel');"class="logo">
+            </div>
+            <div class="contenedorImagen">
+                <img id="strtijera" src="./imagenes/tijera.png" onclick="jugar('tijera');"class="logo">
+            </div>   
+                
+            </div>
+         <div class="resultasdoImagen">
+            <img id="imagen" src=""  class="logo">
+        </div>
+            <div class="resultados"> 
+                <h1>RESULTADO:</h1> 
+            <div class="tit1">
+                <h2 id="resultado"></h2>
+            </div>
+            <div class="ops"> 
+                <div class="contenedorImagen1">
+                    PUNTAJE COMPUTADOR:
+                <h2 id="puntosComputador" >0</h2>
+                </div>
+                <div class="contenedorImagen1"> 
+                PUNTAJE USUARIO:
+                <h2 id="puntosUsuario" >0</h2>
+                </div>
+            </div>
+            <div class="tit1">
+                <h2 id="ganador" ></h2>
+            </div>
+                
+            </div>      
+            </div>   
+            </div> 
+            <div class="contenedorboton"> 
+                 <button id="btnReiniciar" onclick="limpiar();" class="btn liquid">Nueva Partida</button>
+            </div> 
+        </div>
     </body>
 </html>
