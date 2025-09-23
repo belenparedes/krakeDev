@@ -16,6 +16,10 @@ jugar=function(seleccionado)
         mostrarImagen("imagen",generarRuta(elemento1));
         puntosUsuario=puntosUsuario+1;
         mostrarTexto("puntosUsuario",puntosUsuario);
+        if(puntosUsuario==5)
+        {
+            mostrarTexto("ganador","FELICITACIONES, GANASTE EL JUEGO");
+        }
 
     }
     else
@@ -24,5 +28,9 @@ jugar=function(seleccionado)
         mostrarImagen("imagen",generarRuta(elemento1));
         puntosComputador=puntosComputador+1;
         mostrarTexto("puntosComputador",puntosComputador);
+        if(puntosComputador==5)
+        {
+            mostrarTexto("ganador","EL COMPUTADOR TE HA VENCIDO");
+        }
     }
 }
