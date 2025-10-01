@@ -44,4 +44,24 @@ esMayuscula=function(caracter)
     }
     return mayuscula;
 }
+esDigito=function(caracter)
+{
+    let digito=false;
+    let codigo=caracter.charCodeAt(0)
+    if (codigo>=48 && codigo<=57)
+    {
+        digito=true;
+    }
+    return digito;
+}
+esCaracter=function(caracter)
+{
+    let simbolo=false;
+    let codigo=caracter.charCodeAt(0)
+    if (codigo==45||codigo==42|| codigo==95)
+    {
+        simbolo=true;
+    }
+    return simbolo;
 
+}

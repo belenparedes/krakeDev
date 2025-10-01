@@ -36,9 +36,47 @@ invertirCadena=function(cadena)
     for(let posicion=cadena.length;posicion>=0;posicion--)
     {
         caracter=cadena.charAt(posicion);
-        cadena1=cadena1+caracter
+        cadena1=cadena1+caracter //GUARDA EL  CARACTER EN LA MISMA VARIABLE
         mostrarTexto("cadena",cadena1);
 
     }
+
+}
+buscarLetra=function(cadena,letra)
+{
+    let letraIterada
+    let existeLetra=false;
+    for(let i=0;cadena.length;i++)
+    {
+        letraIterada=cadena.charAt(i);
+        if (letraIterada==letra)
+        {
+            existeLetra=true;
+
+        }
+    }
+    if(existeLetra==true)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+contarMayusculas=function(cadena)
+{
+    let letra
+    let contadorMayusculas
+    for(let i=0;i<cadena.length;i++)
+    {
+        letra=cadena.charAt(i);
+        if(esMayuscula(letra))
+        {
+            contadorMayusculas++;
+        }
+
+    }
+    console.log(contadorMayusculas);
 
 }
