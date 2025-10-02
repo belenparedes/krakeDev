@@ -93,7 +93,15 @@ validar=function(letra)
             mostrarLetra(letra,i);
         }
     }
-
+    if(caracter==letra)
+        {
+            letraEncontrada++;
+            mostrarLetra(letra,i);
+        }
+    else
+    {
+        
+    }
 }
 ingresarLetra=function()
     {
