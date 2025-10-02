@@ -23,7 +23,9 @@ guardarPalabra=function()
         
         else 
         {
+            
             palabraSecreta=palabra;
+            console.log(palabraSecreta);
         }
         
     }  
