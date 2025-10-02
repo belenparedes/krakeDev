@@ -34,6 +34,7 @@ guardarPalabra=function()
     {
         alert("Debe ingresar una palabras de 5 letras mayusculas");
     }
+
 }
 esMayuscula=function(caracter)
 {
@@ -48,4 +49,33 @@ esMayuscula=function(caracter)
         mayuscula=false;
     }
     return mayuscula;
+}
+mostrarLetra=function(letra, posicion)
+{
+    let div0;
+    let div1;
+    let div2;
+    let div3;
+    let div4;
+
+    if(posicion==0)
+    {
+    div0=letra;
+    }
+    if(posicion==1)
+    {
+    div1=letra;
+    }
+    if(posicion==2)
+    {
+    div2=letra;
+    }
+    if(posicion==3)
+    {
+    div3=letra;
+    }
+    if(posicion==4)
+    {
+    div4=letra;
+    }
 }
