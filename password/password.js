@@ -15,16 +15,11 @@ ejecutarValidacion=function()
 }
 validarPassword=function(password)
 {
-    let errorLongitud="";
-    let errorMayuscula="";
-    let errorDigito="";
-    let errorEspecial="";
     let tamano;
     let longitudCaracteres;
     let contadorM=0;
     let contadorD=0;
     let contadorE=0;
-    let longitudes=0
     tamano=password.length;
     if(tamano<8 || tamano>16)
     {
