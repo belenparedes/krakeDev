@@ -52,45 +52,59 @@ esMayuscula=function(caracter)
 }
 mostrarLetra=function(letra, posicion)
 {
-    let div0;
-    let div1;
-    let div2;
-    let div3;
-    let div4;
+
 
     if(posicion==0)
     {
-    div0=letra;
+
+    mostrarTexto("div0",letra);
     }
     if(posicion==1)
     {
-    div1=letra;
+        
+    mostrarTexto("div1",letra);
     }
     if(posicion==2)
     {
-    div2=letra;
+        
+    mostrarTexto("div2",letra);
     }
     if(posicion==3)
     {
-    div3=letra;
+        
+    mostrarTexto("div3",letra);
     }
     if(posicion==4)
     {
-    div4=letra;
+        
+    mostrarTexto("div4",letra);
     }
 }
 validar=function(letra)
 {
     let letraEncontrada=0;
-    for(i=0;i<=palabraSecreta.length;i++)
+
+    for(let i=0;i<palabraSecreta.length;i++)
     {
-   let caracter=letra.charAt(i);
+   let caracter=palabraSecreta.charAt(i);
         if(caracter==letra)
         {
-            mostrarLetra(letra,i);
             letraEncontrada++;
+            mostrarLetra(letra,i);
         }
-
     }
 
 }
+ingresarLetra=function()
+    {
+        let letra;
+        letra=recuperarTexto("txtLetra");
+        if(esMayuscula(letra))
+        {
+            validar(letra);
+        }
+        else
+        {
+            alert("SOLO DE ACEPTAN MAYUSCULAS");
+        }
+    }
