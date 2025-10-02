@@ -79,3 +79,18 @@ mostrarLetra=function(letra, posicion)
     div4=letra;
     }
 }
+validar=function(letra)
+{
+    let letraEncontrada=0;
+    for(i=0;i<=palabraSecreta.length;i++)
+    {
+   let caracter=letra.charAt(i);
+        if(caracter==letra)
+        {
+            mostrarLetra(letra,i);
+            letraEncontrada++;
+        }
+
+    }
+
+}
