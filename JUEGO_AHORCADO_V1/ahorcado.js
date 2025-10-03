@@ -1,5 +1,8 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
 let palabraSecreta="";
+let intentos=0;
+let coincidencias=0;
+let errores=0;
 guardarPalabra=function()
 {
     let palabra=recuperarTexto("txtSecreta"); 
@@ -83,33 +86,41 @@ mostrarLetra=function(letra, posicion)
 validar=function(letra)
 {
     let letraEncontrada=0;
-
+    let caracter;
     for(let i=0;i<palabraSecreta.length;i++)
     {
-   let caracter=palabraSecreta.charAt(i);
+        caracter=palabraSecreta.charAt(i);
         if(caracter==letra)
         {
             letraEncontrada++;
+            coincidencias++;
             mostrarLetra(letra,i);
+            
         }
     }
-    if(caracter==letra)
-        {
-            letraEncontrada++;
-            mostrarLetra(letra,i);
-        }
-    else
+    if(caracter!=letra)
     {
-        
+        alert("LA LETRA NO ES PARTE DE LA PALABRA");
+        errores++;
     }
 }
 ingresarLetra=function()
     {
+        intentos++;
         let letra;
         letra=recuperarTexto("txtLetra");
         if(esMayuscula(letra))
         {
             validar(letra);
+            if(coincidencias==5)
+            {
+                alert("HA GANADO");
+
+            }
+            if(intentos==10)
+            {
+                alert("HA PERDIDO");
+            }
         }
         else
         {
