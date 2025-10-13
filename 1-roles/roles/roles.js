@@ -17,7 +17,7 @@ mostrarOpcionEmpleado=function()
     deshabilitarComponente("txtSueldo");
     deshabilitarComponente("btnGuardar");
 } 
-ejecutarNuevo=function() // reto 47_1 hasta el paso 4 funcionando correctamente 
+ejecutarNuevo=function() 
 {
     habilitarComponente("txtCedula");
     habilitarComponente("txtNombre");
