@@ -66,7 +66,7 @@ agregarCliente=function(cliente)
 if(resultado==null)
 {
     clientes.push(cliente);
-    alert("Cliente Agregardo");
+    alert("Cliente Agregado");
     mostrarClientes();
 }
 else

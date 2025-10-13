@@ -110,7 +110,7 @@ tbody tr:nth-child(odd) {
   }
 .estiloBoton:hover {
     background-color:white; 
-    color: #217023;
+    color: #217023; 
     border: 1px solid;
     border-color: #217023;
     border-radius: 5px;
