@@ -17,7 +17,7 @@ mostrarOpcionEmpleado=function()
     deshabilitarComponente("txtSueldo");
     deshabilitarComponente("btnGuardar");
 } 
-ejecutarNuevo=function() 
+ejecutarNuevo=function() // reto 47_1 hasta el paso 4 funcionando correctamente 
 {
     habilitarComponente("txtCedula");
     habilitarComponente("txtNombre");
@@ -59,4 +59,78 @@ mostrarEmpleado=function()
     }
     contTaabla+="</table>";
     compTabla.innerHTML=contTaabla;
+}
+buscarEmpleado=function(cedula)// reto 47_1 funcionando hasta el ultimopaso que es crear la funcion buscar Empleado
+{
+    let elementoEmpeado;
+    let empleadoEncontrado=null;
+    for(let i=0;i<empleados.length;i++)
+    {
+        elementoEmpeado=empleados[i];
+        if(elementoEmpeado.cedula==cedula)
+        {
+             empleadoEncontrado=elementoEmpeado;
+            break;
+        }
+        
+    }
+    return empleadoEncontrado;
+    
+
+
+}
+agregarEmpleado=function(empleado)
+{
+    let resultadoBusqueda;
+    let agregardoEmpleado=false;
+    resultadoBusqueda=buscarEmpleado(empleado.cedula);
+    if(resultadoBusqueda==null)
+    {
+        empleados.push(resultadoBusqueda);
+        agregardoEmpleado=true;
+    }
+    return agregardoEmpleado;
+}
+guardar=function()
+{
+    let estructura=false;
+   let cedula=recuperarTexto("txtCedula"); 
+   let nombre=recuperarTexto("txtNombre");
+   let apellido=recuperarTexto("txtApellido");
+   let sueldo=recuperarFloat("txtSueldo");
+   let digito=esDigito(cedula);
+   if((cedula.length==10)&&(digito==true))
+    {
+        let mayusculaNom=esMayuscula(nombre);
+       if((nombre.length>=3)&&(mayusculaNom==true) )
+        {
+            let mayusculaApell=esMayuscula(apellido);
+            if((apellido.length>=3)&&(mayusculaApell==true))
+            {
+                if(sueldo>=400 && sueldo<=5000)
+                {
+                    estructura=true;
+                   console.log("correcto");
+                }
+                else
+                {
+                    mostrarTexto("lblErrorSueldo","Debe estar entre 400 y 5000");
+                }
+            }
+            else
+            {
+                mostrarTexto("lblErrorApellido","Debe tener minimo 3 catacteres y todas mayusculas");
+            }
+        }
+        else
+        {
+            mostrarTexto("lblErrorNombre","Debe tener minimo 3 catacteres y todas mayusculas");
+            estructura=false;
+         } 
+    }
+    else
+    {
+        mostrarTexto("lblErrorCedula","Debe tener exactamente 10 y deben ser digitos")
+        estructura=false;
+    }
 }
