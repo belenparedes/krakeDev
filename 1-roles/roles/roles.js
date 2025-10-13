@@ -3,6 +3,7 @@ let empleados = [
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
     {cedula:"1850287424",nombre:"Belen",apellido:"Paredes",sueldo:800.0},
 ]
+let esNuevo=false;
 
 mostrarOpcionEmpleado=function()
 {
@@ -10,8 +11,21 @@ mostrarOpcionEmpleado=function()
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
     mostrarEmpleado();
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
+} 
+ejecutarNuevo=function() // reto 47_1 hasta el paso 4 funcionando correctamente 
+{
+    habilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
+    esNuevo=true;
 }
-
 mostrarOpcionRol=function()
 {
     mostrarComponente("divRol");
