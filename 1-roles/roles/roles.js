@@ -122,6 +122,7 @@ guardar=function()
                             {
                                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                                 mostrarEmpleado();
+                                mostrarOpcionEmpleado();
                             }
                             else
                             {
