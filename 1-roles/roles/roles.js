@@ -5,6 +5,7 @@ let empleados = [
 ]
 let esNuevo=false;
 
+
 mostrarOpcionEmpleado=function()
 {
     mostrarComponente("divEmpleado");
@@ -86,14 +87,13 @@ agregarEmpleado=function(empleado)
     resultadoBusqueda=buscarEmpleado(empleado.cedula);
     if(resultadoBusqueda==null)
     {
-        empleados.push(resultadoBusqueda);
+        empleados.push(empleado);
         agregardoEmpleado=true;
     }
     return agregardoEmpleado;
 }
 guardar=function()
 {
-    let estructura=false;
    let cedula=recuperarTexto("txtCedula"); 
    let nombre=recuperarTexto("txtNombre");
    let apellido=recuperarTexto("txtApellido");
@@ -109,8 +109,27 @@ guardar=function()
             {
                 if(sueldo>=400 && sueldo<=5000)
                 {
-                    estructura=true;
-                   console.log("correcto");
+                    esNuevo=true;
+                    if(esNuevo==true)
+                        {
+                            let empleado={};
+                            empleado.cedula=cedula;
+                            empleado.nombre=nombre;
+                            empleado.apellido=apellido;
+                            empleado.sueldo=sueldo;
+                            let agregad0=agregarEmpleado(empleado);
+                            if(agregad0==true)
+                            {
+                                alert("EMPLEADO GUARDADO CORRECTAMENTE");
+                                mostrarEmpleado();
+                            }
+                            else
+                            {
+                                alert("YA EXISTE UN EMPLEADO CON LACEDULA:"+empleado.cedula);
+                            }
+
+                        }
+                   
                 }
                 else
                 {
