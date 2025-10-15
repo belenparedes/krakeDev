@@ -251,3 +251,32 @@ buscarPorRoles=function()
         alert("EMPLEADO NO EXISTE");
     }
 }
+calcularAporteEmpleado=function(sueldo)
+{
+    let calculo=sueldo*9.45;
+    calculo=calculo/100;
+    return calculo;
+}
+calcularValorAPagar=function(sueldo,aporteIess,descuento)
+{
+    let total=sueldo-aporteIess-descuento;
+    return total;
+}
+
+calcularRol=function()
+{
+    let sueldo=recuperarFloatDiv("infoSueldo");
+    let flotante=esFloat("txtDescuentos");
+    if(flotante==true)
+    {
+        if(flotante>=0&&flotante<=sueldo)
+        {
+            let sueldoAporte=calcularAporteEmpleado(sueldo);
+            mostrarTexto("infoIESS",sueldoAporte);
+        }
+    }
+    else
+    {
+        alert("INGRESE UN VALOR VALIDO");
+    }
+}

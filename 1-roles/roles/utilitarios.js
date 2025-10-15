@@ -79,3 +79,34 @@ esDigito=function(caracter)
            
     return mayuscula;
 }
+recuerarTextDiv=function(idComponente)
+{
+     let componente;
+    let valorIngresado;
+    componente=document.getElementById(idComponente);
+    valorIngresado=componente.textContent;
+    return valorIngresado;
+}
+recuperarFloatDiv=function(idComponente)
+{
+    let valorCaja= recuerarTextDiv(idComponente);
+   let valorEntero = parseInt(valorCaja);
+   return valorEntero;
+}
+recuperarFloatDiv = function(idComponente){
+    let valorCaja= recuerarTextDiv(idComponente);
+    let valorFlotante = parseFloat(valorCaja);
+    return valorFlotante;
+ }
+ esFloat=function(idCajaTexto){
+    let texto=recuperarTexto(idCajaTexto);
+    let numero=parseFloat(texto);
+    if(!isNaN(numero) && texto.includes("."))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
