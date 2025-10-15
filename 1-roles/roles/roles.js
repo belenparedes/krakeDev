@@ -321,8 +321,6 @@ calcularAporteEmpleador=function(sueldo)
     let calculo=sueldo*11.15;
     calculo=calculo/100;
     return calculo;
-    
-    
 }
 guardarRol=function()
 {
