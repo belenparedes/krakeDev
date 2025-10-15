@@ -4,6 +4,13 @@ let empleados = [
     {cedula:"1850287424",nombre:"Belen",apellido:"Paredes",sueldo:800.0},
 ]
 let esNuevo=true;
+let roles=[];
+roles.cedula;
+roles.nombre;
+roles.sueldo;
+roles.valorAPagar;
+roles.aporteEmpleado;
+roles.aporteEmpleador;
 
 
 mostrarOpcionEmpleado=function()
@@ -32,6 +39,7 @@ mostrarOpcionRol=function()
     mostrarComponente("divRol");
     ocultarComponente("divEmpleado");
     ocultarComponente("divResumen");
+    deshabilitarComponente("botonRol");
 }
 mostrarOpcionResumen=function()
 {
@@ -255,6 +263,7 @@ calcularAporteEmpleado=function(sueldo)
 {
     let calculo=sueldo*9.45;
     calculo=calculo/100;
+    habilitarComponente("botonRol");
     return calculo;
 }
 calcularValorAPagar=function(sueldo,aporteIess,descuento)
@@ -278,5 +287,65 @@ calcularRol=function()
     else
     {
         alert("INGRESE UN VALOR VALIDO");
+    }
+}
+buscarRol=function(cedula)
+{
+    let elementoRol;
+    let rolEncontrado=null;
+    for(let i=0;i<roles.length;i++)
+    {
+        elementoRol=roles[i];
+        if(elementoRol.cedula==cedula)  
+        {
+                rolEncontrado=elementoRol;
+                break;
+        }
+    }
+    return rolEncontrado;
+}
+AgregarRol=function(rol)
+{
+    let resultadoBusqueda;
+    let agregardoRol=false;
+    resultadoBusqueda=buscarRol(rol.cedula);
+    if(resultadoBusqueda==null)
+    {   
+        roles.push(rol);
+        agregardoRol=true;
+    }   
+    return agregardoRol;
+}
+calcularAporteEmpleador=function(sueldo)
+{
+    let calculo=sueldo*11.15;
+    calculo=calculo/100;
+    return calculo;
+    
+    
+}
+guardarRol=function()
+{
+    let cedula=recuerarTextDiv("infoCedula");
+    let nombre=recuerarTextDiv("infoNombre");
+    let sueldo=recuperarFloatDiv("infoSueldo");
+    let aporteEmpleado=recuperarFloatDiv("infoIESS");
+    let aporteEmpleador=calcularAporteEmpleador(sueldo);
+    let rol={};
+    rol.cedula=cedula;
+    rol.nombre=nombre;
+    rol.sueldo=sueldo;              
+    rol.aporteEmpleado=aporteEmpleado;
+    rol.aporteEmpleador=aporteEmpleador;
+    let guardado=AgregarRol(rol);
+    if(guardado==true)
+    { 
+        alert("ROL GUARDADO CORRECTAMENTE");
+        mostrarOpcionResumen();
+        deshabilitarComponente("botonRol");
+    }
+    else
+    {
+        alert("YA EXISTE UN ROL PARA LA CEDULA:"+rol.cedula);
     }
 }
