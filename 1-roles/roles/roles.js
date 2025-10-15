@@ -3,7 +3,7 @@ let empleados = [
     {cedula:"0914632123",nombre:"Luisa",apellido:"Gonzalez",sueldo:900.0},
     {cedula:"1850287424",nombre:"Belen",apellido:"Paredes",sueldo:800.0},
 ]
-let esNuevo=false;
+let esNuevo=true;
 
 
 mostrarOpcionEmpleado=function()
@@ -38,6 +38,24 @@ mostrarOpcionResumen=function()
     mostrarComponente("divResumen");
     ocultarComponente("divRol");
     ocultarComponente("divEmpleado");   
+}
+mostrarcajaEditado=function()
+{
+    
+    deshabilitarComponente("txtCedula");
+    habilitarComponente("txtNombre");
+    habilitarComponente("txtApellido");
+    habilitarComponente("txtSueldo");
+    habilitarComponente("btnGuardar");
+    
+}
+mostrarCajaDesabilitada=function()
+{
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
 }
 mostrarEmpleado=function()
 {
@@ -94,6 +112,7 @@ agregarEmpleado=function(empleado)
 }
 guardar=function()
 {
+    let modificado;
    let cedula=recuperarTexto("txtCedula"); 
    let nombre=recuperarTexto("txtNombre");
    let apellido=recuperarTexto("txtApellido");
@@ -109,9 +128,11 @@ guardar=function()
             {
                 if(sueldo>=400 && sueldo<=5000)
                 {
-                    esNuevo=true;
+                    
                     if(esNuevo==true)
-                        {
+                    {
+
+                            let resultadoBusqieda;
                             let empleado={};
                             empleado.cedula=cedula;
                             empleado.nombre=nombre;
@@ -123,14 +144,43 @@ guardar=function()
                                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                                 mostrarEmpleado();
                                 mostrarOpcionEmpleado();
+                                esNuevo=false;
                             }
                             else
                             {
-                                alert("YA EXISTE UN EMPLEADO CON LACEDULA:"+empleado.cedula);
+                                alert("YA EXISTE UN EMPLEADO CON LA CEDULA:"+empleado.cedula);
+                                resultadoBusqieda=buscarEmpleado(empleado.cedula);
+                                ejecutarBusqueda();
+                                
                             }
 
+                    }
+                    else
+                    {
+                        
+                        for(let i=0;i<empleados.length;i++)
+                        {
+                            
+                            if(empleados[i].cedula==cedula)
+                            {
+                                empleados[i]=
+                                {
+                                    cedula:cedula,
+                                    nombre:nombre,
+                                    apellido:apellido,
+                                    sueldo:sueldo
+                                };
+
+                                modificado=true;
+                            }
                         }
-                   
+                    }
+                    if(modificado==true)
+                    {
+                        alert("EMPLEADO MODIFICADO CORRECTAMENTE");
+                        mostrarEmpleado();
+                        mostrarOpcionEmpleado();
+                    }
                 }
                 else
                 {
@@ -153,4 +203,35 @@ guardar=function()
         mostrarTexto("lblErrorCedula","Debe tener exactamente 10 y deben ser digitos")
         estructura=false;
     }
+}
+ejecutarBusqueda=function()
+{
+    let busqueda=recuperarTexto("txtBusquedaCedula");
+    let encontrado=buscarEmpleado(busqueda);
+    if(encontrado==null)
+    {
+        alert("EMPLEADO NO EXISTE");
+    }else
+    {
+        mostrarTextoEnCaja("txtCedula",encontrado.cedula);
+        mostrarTextoEnCaja("txtNombre",encontrado.nombre);
+        mostrarTextoEnCaja("txtApellido",encontrado.apellido);
+        mostrarTextoEnCaja("txtSueldo",encontrado.sueldo);
+        mostrarcajaEditado();
+        esNuevo=false;
+
+    }
+
+    
+}
+limpiar=function()
+{
+    mostrarTextoEnCaja("txtCedula","");
+    mostrarTextoEnCaja("txtNombre","");
+    mostrarTextoEnCaja("txtApellido","");
+    mostrarTextoEnCaja("txtSueldo","");
+    esNuevo=false;
+    mostrarCajaDesabilitada();
+
+
 }
