@@ -235,3 +235,19 @@ limpiar=function()
 
 
 }
+
+buscarPorRoles=function()   
+{
+    let rol=recuperarTexto("txtBusquedaCedulaRol");
+   let buscador=buscarEmpleado(rol);
+    if(buscador!=null)
+    {
+        mostrarTexto("infoCedula",buscador.cedula);
+        mostrarTexto("infoNombre",buscador.nombre+" "+buscador.apellido);
+        mostrarTexto("infoSueldo",buscador.sueldo);
+    }
+    else
+    {
+        alert("EMPLEADO NO EXISTE");
+    }
+}
