@@ -1,0 +1,64 @@
+[2025-10-16 18:06:31] [info]  [ 3456] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:06:31] [info]  [ 3456] Running Service 'Tomcat11'...
+[2025-10-16 18:06:31] [info]  [30052] Starting service...
+[2025-10-16 18:06:32] [error] [ 9228] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:06:32] [error] [30052] Failed to start Java
+[2025-10-16 18:06:32] [error] [30052] ServiceStart returned 4.
+[2025-10-16 18:06:32] [info]  [ 3456] Run service finished.
+[2025-10-16 18:06:32] [info]  [ 3456] Apache Commons Daemon procrun finished.
+[2025-10-16 18:09:51] [info]  [ 7960] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:09:51] [info]  [ 7960] Running Service 'Tomcat11'...
+[2025-10-16 18:09:51] [info]  [25776] Starting service...
+[2025-10-16 18:09:51] [error] [35500] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:09:51] [error] [25776] Failed to start Java
+[2025-10-16 18:09:51] [error] [25776] ServiceStart returned 4.
+[2025-10-16 18:09:51] [info]  [ 7960] Run service finished.
+[2025-10-16 18:09:51] [info]  [ 7960] Apache Commons Daemon procrun finished.
+[2025-10-16 18:10:04] [info]  [34064] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:10:04] [info]  [34064] Running Service 'Tomcat11'...
+[2025-10-16 18:10:04] [info]  [ 5792] Starting service...
+[2025-10-16 18:10:04] [error] [20088] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:10:04] [error] [ 5792] Failed to start Java
+[2025-10-16 18:10:04] [error] [ 5792] ServiceStart returned 4.
+[2025-10-16 18:10:04] [info]  [34064] Run service finished.
+[2025-10-16 18:10:04] [info]  [34064] Apache Commons Daemon procrun finished.
+[2025-10-16 18:10:53] [info]  [34480] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:10:54] [info]  [34480] Running Service 'Tomcat11'...
+[2025-10-16 18:10:54] [info]  [31184] Starting service...
+[2025-10-16 18:10:54] [error] [35536] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:10:54] [error] [31184] Failed to start Java
+[2025-10-16 18:10:54] [error] [31184] ServiceStart returned 4.
+[2025-10-16 18:10:54] [info]  [34480] Run service finished.
+[2025-10-16 18:10:54] [info]  [34480] Apache Commons Daemon procrun finished.
+[2025-10-16 18:13:11] [info]  [34152] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:13:11] [info]  [34152] Running Service 'Tomcat11'...
+[2025-10-16 18:13:11] [info]  [14712] Starting service...
+[2025-10-16 18:13:11] [error] [21756] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:13:11] [error] [14712] Failed to start Java
+[2025-10-16 18:13:11] [error] [14712] ServiceStart returned 4.
+[2025-10-16 18:13:11] [info]  [34152] Run service finished.
+[2025-10-16 18:13:11] [info]  [34152] Apache Commons Daemon procrun finished.
+[2025-10-16 18:13:21] [info]  [26144] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:13:21] [info]  [26144] Running Service 'Tomcat11'...
+[2025-10-16 18:13:21] [info]  [31720] Starting service...
+[2025-10-16 18:13:21] [error] [23884] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:13:21] [error] [31720] Failed to start Java
+[2025-10-16 18:13:21] [error] [31720] ServiceStart returned 4.
+[2025-10-16 18:13:21] [info]  [26144] Run service finished.
+[2025-10-16 18:13:21] [info]  [26144] Apache Commons Daemon procrun finished.
+[2025-10-16 18:18:29] [info]  [30928] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:18:29] [info]  [30928] Running Service 'Tomcat11'...
+[2025-10-16 18:18:29] [info]  [34600] Starting service...
+[2025-10-16 18:18:29] [error] [35676] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:18:29] [error] [34600] Failed to start Java
+[2025-10-16 18:18:29] [error] [34600] ServiceStart returned 4.
+[2025-10-16 18:18:29] [info]  [30928] Run service finished.
+[2025-10-16 18:18:29] [info]  [30928] Apache Commons Daemon procrun finished.
+[2025-10-16 18:20:59] [info]  [27836] Apache Commons Daemon procrun (1.4.1.0 64-bit) started.
+[2025-10-16 18:20:59] [info]  [27836] Running Service 'Tomcat11'...
+[2025-10-16 18:20:59] [info]  [15628] Starting service...
+[2025-10-16 18:20:59] [error] [33312] FindClass org/apache/catalina/startup/Bootstrap failed
+[2025-10-16 18:20:59] [error] [15628] Failed to start Java
+[2025-10-16 18:20:59] [error] [15628] ServiceStart returned 4.
+[2025-10-16 18:20:59] [info]  [27836] Run service finished.
+[2025-10-16 18:20:59] [info]  [27836] Apache Commons Daemon procrun finished.

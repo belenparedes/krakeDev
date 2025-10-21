@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="utilitariosCadenas.js"></script>
+        <script src ="orden.js"></script>
+        <script src="servicioPlacas.js"></script>
+        <script src="utilitarios.js"></script>
+       <link rel="stylesheet" href="placas.css" />
+    </head>
+    <body onload="mostrarTabla();">
+        <div class="principal">
+       
+            <div class="contenedor1">
+                <div class="contenedor">
+                            <div class="titulo">
+                                AGREGAR PERSONAS
+                            </div>
+
+                            <div class="ingresoDatos">
+                                <div class="tituloCampo">
+                                    Ingresar el nombre: 
+                                </div>
+                                <div>
+                                    <input type="text" class="cajaTexto" id="txtNombre" />
+                                    <div class="error" id="lblError"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="ingresoDatos">
+                                <div class="tituloCampo">
+                                    Ingresar la edad: 
+                                </div>
+                                <div>
+                                    <input type="text" class="cajaTexto" id="txtEdad" />
+                                    <div class="error1" id="lblError1"></div>
+                                </div>
+                                
+                            </div>
+                        
+                            <div class="botones">
+                                <div class="contenedorBoton">
+                                    <div>
+                                    <input type="button" value="GUARDAR"
+                                    class="estiloBoton" onclick="agregarPersona();" />
+                                    </div>
+                                    <div>
+                                    <input type="button" value="ENCONTRAR MAYOR"
+                                    class="estiloBoton" onclick="determinarMayor();" />
+                                    </div>
+                                    <div>
+                                    <input type="button" value="ENCONTRAR MENOR"
+                                    class="estiloBoton" onclick="determinarMenor();" />
+                                    </div>
+                                </div>
+                            </div> 
+                    </div>
+                    <div class="contenedor2">
+                        <div class="titulo" id="titulo">
+                                TABLA
+                            </div>
+            <div class="areaTabla" id="mostrarTabla" ></div>
+                    </div>
+        </div>
+        </div>
+            
+        </div>
+                        
+    </body>
+</html>
